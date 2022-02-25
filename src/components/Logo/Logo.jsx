@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoMails from './LogoMails.png'
-import './NavBar.css';
+import '../NavBar/NavBar.css';
 
 
 function Logo() {
