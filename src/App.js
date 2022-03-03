@@ -1,29 +1,22 @@
+import React from 'react';
 import './App.css';
-import ItemCount from './components/ItemCount';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from './components/NavBar/CartWidget';
 import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+
 
 function App() {
   const greeting = () => NavBar.appendChild(ItemListContainer)
-  const onAdd = (cant) => {
-    console.log(cant) 
- }
 
-  function ItemListContainer() {
-    
-    return (
-      <div id="saludo">Bienvenido a la tienda online del Estudio</div>
-    )
-    
-  }
 
   return (
-    <div className="App"> 
+    <div className="App">
       <NavBar>
-      <CartWidget /> 
+        <CartWidget />
       </NavBar>
-    <ItemListContainer greeting={greeting} />
-    <ItemCount initial={1} stock= {10} onAdd= {onAdd} />
+      <div id="saludo">Bienvenido a la tienda online del Estudio</div>
+      <ItemListContainer greeting={greeting} />
     </div>
   );
 }
