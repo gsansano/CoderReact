@@ -54,3 +54,9 @@
   flex-wrap: wrap;
   padding: 0 5% 0 5%;
 }
+
+.detalle {
+  width: 40rem;
+  margin: auto;
+  font-size: 1rem;
+}
