@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+******README DEL PROYECTO CODERHOUSE COMISION 25460*****
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+>NOMBRE DEL PROYECTO: "E-commerce del Estudio Jurídico Nolivo - Sansano & Asociados"
 
-In the project directory, you can run:
+>DESCRIPCIÓN: "Proyecto final del curso de ReactJs de CoderHouse, comisión Nº 25460 consistente en crear un e-commerce utilizando las tecnologías enseñadas en el curso."
 
-### `npm start`
+>INSTALACIÓN Y LIBRERÍAS: El proyecto se realiza sobre una app de ReactJs instalada mediante NodeJs NPM manager. En el mismo se emplean las siguientes tecnologías:
+*HTML5
+*CSS 3
+*BOOTSTRAP 5
+*NODEJS V.14.19.0
+*NPM V. 8.5.0
+*REACTJS Y REACT ROUTER DOM
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+>ESTRUCTURA DEL PROYECTO: El armado del sitio se realizó utilizando la estructura de componentes implementada por ReactJs, siendo los mismos:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+_INDEX.JSX: Índice principal que renderiza la aplicación mediante el método ReactDOM.Render.
 
-### `npm test`
+_APP.JSX: Contiene la aplicación principal, que realiza el enrutado y el llamado a los componentes contenedores y navbar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_ITEMLISTCONTAINER.JSX: Componente contenedor que renderiza un saludo en pantalla como título del sitio y llama al listado de ítems.
 
-### `npm run build`
+_ITEMLIST.JS: Componente que realiza un async-mock para simular el llamado a una API, y siendo la respuesta positiva renderiza varias instancias del componente ITEM.JS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_ITEM.JS: Contiene el elemento a renderizar, en forma de tarjeta-card de bootstrap, mostrando la información recibida en los parámetros.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_GETFETCH.JS: Se compone de un array de objetos que es exportado en la constante productos, para luego ser pasado como respuesta a los diversos llamados que realizan los demás componentes mediante la promesa getfetch, que es exportada por defecto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_ITEMCOUNT.JSX: Componente que renderiza un contador interactivo para permitir al usuario agregar o sustraer productos de un carro de compras.
 
-### `npm run eject`
+_CART.JSX: Componente que contiene al carro de compras - en desarrollo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+_ITEMDETAILCONTAINER.JSX: Componente que por medio de un hook de UseEffect, renderiza una instancia del componente ItemDetail cada vez que es requerido por el usuario mediante un evento.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_ITEMDETAIL.JSX: Contiene el detalle de cada ítem a renderizar, que recibe por props.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_NAVBAR.JSX: Componente que arma la barra de navegación presente en todo el sitio, mostrando además el Branding y el widget del carro de compras.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+_CARTWIDGET.JSX: Widget del carro de compras que renderiza la imagen a desplegarse en el Navbar.
 
-## Learn More
+_LOGO.JSX: Renderiza la imagen del branding que se coloca en la esquina superior izquierda del Navbar.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+_NAVBAR.CSS: Hoja de estilos del Navbar.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_APP.CSS: Hoja de estilos principal de la app.
 
-### Code Splitting
+_INDEX.CSS: Hoja de estilos global del proyecto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+>ESTADO DEL PROYECTO: En desarrollo. Testing pre-producción.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+>ÚLTIMO COMMIT: Se agregó el enrutado de ReactRouterDOM, mediante la declaración de rutas en App.jsx y su llamado utilizando Link y Navlink en los distintos componentes. Se detallaron las categorías de los productos del e-commerce y se actualizó este readme.
 
-### Making a Progressive Web App
+>AUTOR: Guillermo Sansano
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+>REPOSITORIO REMOTO: Se utiliza GitHub, alojado en: https://github.com/gsansano/CoderReact
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

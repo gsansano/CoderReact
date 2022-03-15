@@ -1,33 +1,30 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import CartWidget from './CartWidget.jsx';
 import './NavBar.css';
 
 
 function NavBar() {
-  return (
-    <div className='navbar'>
-        <div className='logo'><Logo /></div>
-        <ul className="lista">
+    return (
+
+        <div className='navbar'>
+            <Link to="/" className='logo'><Logo /></Link>
+            <ul className="lista">
                 <li className="item">
-                    <a className="link" href="Index.html">Home</a>
+                    <NavLink className="link" to="/">Home</NavLink>
                 </li>
                 <li className="item">
-                    <a className="link" href="Nosotros.html">Nosotros</a>
+                    <NavLink to="categoria/Extrajudicial" className="link">Extrajudicial</NavLink>
                 </li>
+                <NavLink to="categoria/Judicial" className="link">Judicial</NavLink>
                 <li className="item">
-                    <a className="link" href="Servicios.html">Servicios</a>
+                    <NavLink to="/" className="link">Contacto</NavLink>
                 </li>
-                <li className="item">
-                    <a className="link" href="Clientes.html">Clientes</a>
-                </li>
-                <li className="item">
-                    <a className="link" href="Contacto.html">Contacto</a>
-                </li>
-        </ul>
-        <div className='cart'><CartWidget /></div>
-    </div>
-  )
+            </ul>
+            <div className='cart'><CartWidget /></div>
+        </div>
+    )
 }
 
 export default NavBar

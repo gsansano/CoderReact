@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Item({ prod }) {
 
@@ -16,11 +17,11 @@ function Item({ prod }) {
                 </div>
                 <div>Valor: {prod.price}</div>
                 <div className="card-footer">
-                    {/* <Link to={`/detalle/${prod.id}`}> */}
-                    <button className="btn btn-outline-primary btn-block">
-                        Detalle del producto
-                    </button>
-                    {/* </Link>                                             */}
+                    <Link to={`/detalle/${prod.id}`}>
+                        <button className="btn btn-outline-primary btn-block">
+                            Detalle del producto
+                        </button>
+                    </Link>
 
                 </div>
             </div>
