@@ -4,16 +4,44 @@ import { createContext, useState } from "react";
 const CartContext = createContext([]);
 export const useCartContext = () => useContext(CartContext)
 
-function CartContextProvider({children}) {
+const CartContextProvider = ({children}) => {
     const [cartList, setCartlist] = useState([])
 
-    const isInCart = (id) => {
-        return cartList.some((item)=> item.id === id)
+    const agregarCarrito = (item) => {
+
+        const index = cartList.findIndex(i => i.id === item.id)
+  
+          if (index > -1) {
+            const oldQy = cartList[index].cantidad
+  
+            cartList.splice(index, 1)
+            setCartlist([...cartList, { ...item, cantidad: item.cantidad + oldQy}])
+          } else {
+            setCartlist([...cartList, {...item, cantidad: item.cantidad}])
+          }
+      }
+
+
+      const precioTotal =()=>{
+        return cartList.reduce((acum, prod) => acum + (prod.cantidad * prod.price) , 0)
+      }
+
+    const cantidadItem = () =>{
+        return cartList.reduce( (acum, prod)=> acum = acum + prod.cantidad , 0)
     }
 
-    const agregarCart = (item)=> {
-        setCartlist([...cartList, item])
+
+    const quitarProd = (itemIncart) => {
+        const index = cartList.findIndex(i => i.id === itemIncart.id);
+        const cartCopy = Array.from(cartList);
+    
+        if (index >= 0) {
+          cartCopy.splice(index, 1);
+          setCartlist(cartCopy);
+        }
     }
+
+
 
     const vaciarCart=()=>{
         setCartlist([])
@@ -23,8 +51,10 @@ function CartContextProvider({children}) {
     return (
         <CartContext.Provider value={{
             cartList,
-            agregarCart,
-            isInCart,
+            agregarCarrito,
+            precioTotal,
+            cantidadItem,
+            quitarProd,
             vaciarCart
         }}>
         {children}

@@ -22,7 +22,7 @@ function NavBar() {
                     <NavLink to="/" className="link">Contacto</NavLink>
                 </li>
             </ul>
-            <div className='cart'><CartWidget /></div>
+            <div><CartWidget /></div>
         </div>
     )
 }

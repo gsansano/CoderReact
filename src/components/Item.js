@@ -15,7 +15,7 @@ function Item({ prod }) {
                 <div className="card-body">
                     <img src={prod.foto} alt='' className='w-50' />
                 </div>
-                <div>Valor: {prod.price}</div>
+                <div>Valor: ${prod.price}</div>
                 <div className="card-footer">
                     <Link to={`/detalle/${prod.id}`}>
                         <button className="btn btn-outline-primary btn-block">

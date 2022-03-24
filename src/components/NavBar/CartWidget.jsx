@@ -1,13 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Carrito from './Carrito.png'
-import './NavBar.css'
+import Carrito from './cart.svg'
+import { useCartContext } from '../../context/CartContext';
+
 
 function CartWidget() {
+  const {cantidadItem} = useCartContext()
+
   return (
-    <div>
-      <Link to="/cart"> <img className='cart' src={Carrito} alt='' /></Link>
-    </div>
+    <>
+      <Link to="/cart"> <img width={"40px"} src={Carrito} alt='' />
+      <span className= {cantidadItem() === 0 ? "badge bg-secondary" : "badge bg-danger"}>{cantidadItem()}</span>
+      </Link>
+    </>
   )
 }
 

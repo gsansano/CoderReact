@@ -1,6 +1,10 @@
 /*=======================
       NAVBAR
 =======================*/
+#span {
+    display: inline;
+}
+
 .navbar {
     display: flex;
     background-color: #3d2aec;
@@ -34,10 +38,3 @@
     padding: 0 .8rem;
 }
 
-.cart {
-    display: flex;
-    max-height: 90px;
-    justify-content: flex-end;
-    margin-right: 3%;
-    padding: 0.2rem 0 0.7rem 0;
-}
