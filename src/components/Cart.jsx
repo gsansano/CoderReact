@@ -23,12 +23,12 @@ export const Cart = () => {
 
 
   return (
-    
+
     <div>
       <h2>Carrito de compras</h2>
       {cartList.length === 0 ? (msgCond) : (
         cartList.map(
-          prod => <div className='cartitem'>{prod.name} Cantidad: {prod.cantidad} {<img className='cartimg' src={prod.foto} alt=''></img>} <button onClick={() => { quitarProd(prod) }}>Eliminar producto</button> </div>,
+          prod => <div className='cartitem'>{prod.title} Cantidad: {prod.cantidad} {<img className='cartimg' src={prod.image} alt=''></img>} <button onClick={() => { quitarProd(prod) }}>Eliminar producto</button> </div>,
         ))}
       <h2>Precio total: ${precioTotal()}</h2>
       <button className="btn btn-secondary" onClick={vaciarCart}>Vaciar Carrito</button><Link to="/" className="btn btn-primary">Seguir comprando</Link>

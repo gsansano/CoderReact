@@ -10,10 +10,10 @@ function Item({ prod }) {
         >
             <div className="card w-100 mt-5" >
                 <div className="card-header">
-                    {`${prod.name} - ${prod.categoria}`}
+                    {`${prod.title} - ${prod.categoryId}`}
                 </div>
                 <div className="card-body">
-                    <img src={prod.foto} alt='' className='w-50' />
+                    <img src={prod.image} alt='' className='w-50' />
                 </div>
                 <div>Valor: ${prod.price}</div>
                 <div className="card-footer">
