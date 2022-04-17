@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import Cart from './components/Cart';
+import ItemListContainer from './containers/ItemListContainer';
+import ItemDetailContainer from './containers/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
 import CartContextProvider from './context/CartContext';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             <Route path='/*' element={<Navigate to='/' replace />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
-
+          <Footer />
         </div>
       </BrowserRouter>
     </CartContextProvider>

@@ -6,13 +6,15 @@
 }
 
 .navbar {
-    display: flex;
-    background-color: #3d2aec;
+    background-color: #121212;
     padding-right: 4rem;
     height: 3rem;
-    align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+.carticon {
+    filter: invert(1);
 }
 
 .lista {

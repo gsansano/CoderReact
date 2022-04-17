@@ -8,7 +8,7 @@ import './NavBar.css';
 function NavBar() {
     return (
 
-        <div className='navbar'>
+        <div className='navbar col-md-12'>
             <Link to="/" className='logo'><Logo /></Link>
             <ul className="lista">
                 <li className="item">
@@ -22,7 +22,7 @@ function NavBar() {
                     <NavLink to="/" className="link">Contacto</NavLink>
                 </li>
             </ul>
-            <div><CartWidget /></div>
+            <div className='carticon'><CartWidget /></div>
         </div>
     )
 }
