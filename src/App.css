@@ -1,12 +1,22 @@
-body {
+html, body {
+  margin: 0px;
+  height: 100%;
   text-align: center;
   background-color: rgba(245, 243, 243, 0.877);
-  background-size: cover;
-  block-size: auto;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #saludo {
-
   display: flex;
   margin-top: 50px;
   align-items: center;
@@ -16,19 +26,11 @@ body {
   font-weight: bold;
 }
 
-.App {
-  display: flexbox;
-  size: 100vh;
-  align-content: space-between;
-  justify-content: space-between;
-}
-
 .contenedor {
+  height: auto;
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  row-gap: 2rem;
-  align-content: center;
   justify-items: center;
   }
 
@@ -72,6 +74,13 @@ color: white;
 
 .card-footer {
   background-color: rgb(240, 231, 223);
+}
+
+.checkout {
+  grid-column: 2;
+  margin: 2rem auto;
+  height: 100%;
+  font-size: 1.5rem;
 }
 
 footer {
